@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
 import { RegistrationService } from '../registration.service';
 import { Client } from '../client';
-import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,14 +18,14 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
     this._service.loginClientRemote(this.client).subscribe(
-      data=> {
+      ()=> {
          console.log("Response received");
          this._router.navigate(['/loginsuccess'])
       } ,
       
-      error =>{  
+      () =>{  
         console.log("error occur ");
-this.msg="Bad Credentials,please enter valid Email ID and Password ";
+        this.msg="Bad Credentials,please enter valid Email ID and Password ";
       }
     )
   }
