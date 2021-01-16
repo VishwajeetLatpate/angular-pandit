@@ -1,4 +1,4 @@
-<h1>Welcome </h1>
+<!-- <h1>Welcome </h1>
 
 <form  #loginsuccessform="ngForm" (ngSubmit)="getAll()">
  <div class="form-group">   
@@ -50,5 +50,53 @@
       </tr>
     </tbody>
 </table>
+-->
+<h1>Welcome </h1>
+
+<form  #loginsuccessform="ngForm" (ngSubmit)="getAll()">
+ <div class="form-group">   
+ <label for="vidhiSelection">Vidhis list (select one):</label>
+ <select name="vidhiSelection" [(ngModel)]="vidhiName" class="form-control" id="vidhiSelection">
+    <option *ngFor="let vidhiOption of vidhiOptions" [name]="vidhiOption.name" [ngValue]="vidhiOption.name">{{vidhiOption.name}}</option>
+ </select>
+<br>
+<button class="btn btn-primary" type="submit">Submit</button>
+</div>
+</form>
+<br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">firstName</th>
+      <th scope="col">lastName</th>
+      <th scope="col">contactNumber</th>
+      <th scope="col">city</th>
+      <th scope="col">emailId</th>
+      <th scope="col">password</th>
+      <th scope="col">dakshina</th>
+      <th></th>
+    </tr>
+  </thead>
+  
+      
+    <tbody *ngFor="let p of data">
+      <tr>
+        <td> {{p.id}}</td>
+        <td> {{p.firstName}}</td>
+        <td> {{p.lastName}}</td>
+        <td> {{p.contactNumber}}</td>
+        <td> {{p.city}}</td>
+        <td> {{p.emailId}}</td>
+        <td> {{p.password}}</td>
+        <td> {{p.dakshina}}</td>
+        <td><button type="button" class="btn btn-primary">Select</button></td>
+      </tr>
+    </tbody>
+</table>
+
+
+
 
 
