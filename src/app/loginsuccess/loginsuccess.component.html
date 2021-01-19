@@ -1,5 +1,5 @@
 <h1>Welcome </h1>
-
+<p>Client Id </p>
 <form  #loginsuccessform="ngForm" (ngSubmit)="getAll()">
  <div class="form-group">   
  <label for="vidhiSelection">Vidhis list (select one):</label>
@@ -21,7 +21,6 @@
       <th scope="col">contactNumber</th>
       <th scope="col">city</th>
       <th scope="col">emailId</th>
-      <th scope="col">password</th>
       <th scope="col">dakshina</th>
       <th></th>
     </tr>
@@ -36,14 +35,38 @@
         <td> {{p.contactNumber}}</td>
         <td> {{p.city}}</td>
         <td> {{p.emailId}}</td>
-        <td> {{p.password}}</td>
         <td> {{p.dakshina}}</td>
-        <td><button type="button" class="btn btn-primary">Select</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="gotobooking(p.vidhiPanditId)">Select</button></td>
       </tr>
     </tbody>
 </table>
+<br>
+
+<button type="button" class="btn btn-primary" (click)="getAllBooking()">Select</button>
+
+<h3>Booking Table</h3>
 
 
-
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">BookingId</th>
+        <th scope="col">Vidhi Name</th>
+        <th scope="col">Pandit Name</th>
+        <th scope="col">Dakshina</th>
+        <th></th>
+      </tr>
+    </thead>
+    
+        
+    <tbody *ngFor="let b of bookingData">
+        <tr>
+          <td> {{b.bookingId}}</td>
+          <td> {{b.vidhiName}}</td>
+          <td> {{b.panditName}}</td>
+          <td> {{b.dakshina}}</td>
+          </tr>
+      </tbody>     
+  </table>
 
 

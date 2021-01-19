@@ -3,12 +3,13 @@ import { Observable, throwError } from 'rxjs';
 import { Client } from './client';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { BookingParams } from './booking-params';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegistrationService {
-  
+ 
 /* 
 getAll(): Observable<any> {
     return this.http.get(this.api)*/  
@@ -38,6 +39,12 @@ getAll(): Observable<any> {
     console.log('Something is wrong!'));
 };
 
-
+public postBooking(bookingParams:BookingParams):Observable<any> {
+  return this._http.post("http://localhost:8080/booking",bookingParams)
+}
+ 
+public getBookingFromRemote(clientId:Number):Observable<any>{
+  return this._http.get(`http://localhost:8080/booking?clientId=${clientId}`)
+}
 }
 

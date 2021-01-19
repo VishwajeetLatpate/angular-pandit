@@ -8,13 +8,16 @@ import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+import { BookingComponent } from './booking/booking.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    LoginsuccessComponent
+    LoginsuccessComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

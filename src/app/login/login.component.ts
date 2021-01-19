@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../registration.service';
 import { Client } from '../client';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
    client = new Client();
    msg='';
+   
+   public noData: any;
+   public results;
   constructor(private _service: RegistrationService,private _router : Router) { }
   
   ngOnInit(): void {
@@ -18,9 +21,15 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
     this._service.loginClientRemote(this.client).subscribe(
-      ()=> {
-         console.log("Response received");
-         this._router.navigate(['/loginsuccess'])
+      (results)=> {
+        let navigationExtras: NavigationExtras = {
+          queryParams: {
+              "clientId": `${results.clientId}`,
+              
+          }
+      };
+        
+         this._router.navigate(['/loginsuccess'],navigationExtras)
       } ,
       
       () =>{  
