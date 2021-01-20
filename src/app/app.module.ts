@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { BookingComponent } from './booking/booking.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BookingComponent } from './booking/booking.component';
     LoginComponent,
     RegistrationComponent,
     LoginsuccessComponent,
-    BookingComponent
+    BookingComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

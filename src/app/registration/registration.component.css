@@ -1,0 +1,19 @@
+body{
+    background-image: url('/assets/images/123.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+}
+   
+
+.submit {
+    background-color: chocolate;
+    color: black;
+    padding: 8px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 3px 2px;
+    cursor: pointer;
+    width: 25%;
+    }

@@ -1,0 +1,81 @@
+a:link, a:visited {
+    background-color: firebrick;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: indianred;
+  }
+  
+  img{
+    width: 25%;
+    height:250px;
+  }
+  
+  
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
+  
+  
+  #tag,#PC{
+  
+  box-align:center;
+  }
+  #marquee,#marquee1{
+  background-color:brown;
+  
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+  #h1{
+  background-color:firebrick;
+  font-size:60px;
+   
+   color:orange;
+   text-align:center;
+     font-family: Copperplate, Papyrus, fantasy;
+  
+  
+  }
+  #Pregistration{
+  color:maroon;
+  font-size:23px;
+  border-radius: 10px;
+  }
+  #Cregistration{
+  font-size:23px;
+  color:maroon;
+  border-radius:10px;
+  
+  }
+  #Plogin{
+  color:maroon;
+  font-size:23px;
+  border-radius: 10px;
+  
+  }
+  #Clogin{
+  color:Maroon;
+  font-size:23px;
+  border-radius: 10px;
+  
+  }
+  
+ 
+  a.button {
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      appearance: button;
+  
+      text-decoration: none;
+      color: initial;
+  
+  
+  }
+  
+  

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {Client} from '../client';
 import {RegistrationService } from '../registration.service';
 import { Router } from '@angular/router';
@@ -11,9 +11,11 @@ export class RegistrationComponent implements OnInit {
  
   client =new Client();
   msg='';
+  
   constructor(private _service: RegistrationService,private _router : Router) { }
   
   ngOnInit() {
+    
   }
 
   registerClient(){
