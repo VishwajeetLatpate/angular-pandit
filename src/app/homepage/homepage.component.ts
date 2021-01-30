@@ -13,12 +13,28 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  Plogin(){}
+  Plogin(){
+    this._router.navigate(['/pandit-login']);
+  }
   cregistration(){
     this._router.navigate(['/registration']);
   }
-  pregistration(){}
+
   clogin(){
     this._router.navigate(['/login']);
+  }
+  aboutUs(){
+    this._router.navigate(['/aboutus']);
+  }
+  contactuspage(){
+    this._router.navigate(['/contactuspage']);
+
+  }
+  navgrahavichar(){
+    this._router.navigate(['/navgrahavichar']);
+
+  }
+  pregistration(){
+    this._router.navigate(['/pandit-registration']);
   }
 }

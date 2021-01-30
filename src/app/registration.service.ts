@@ -4,12 +4,13 @@ import { Client } from './client';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { BookingParams } from './booking-params';
+import { Pandit } from './pandit';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegistrationService {
- 
+   
 /* 
 getAll(): Observable<any> {
     return this.http.get(this.api)*/  
@@ -46,5 +47,14 @@ public postBooking(bookingParams:BookingParams):Observable<any> {
 public getBookingFromRemote(clientId:Number):Observable<any>{
   return this._http.get(`http://localhost:8080/booking?clientId=${clientId}`)
 }
+
+registerPanditFromRemote(pandit: Pandit) {
+  return this._http.post("http://localhost:8080/post-pandit",pandit);
+}
+
+loginPanditRemote(pandit: Pandit) {
+  return this._http.post("http://localhost:8080/login",pandit);
+}
+
 }
 

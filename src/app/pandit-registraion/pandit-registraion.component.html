@@ -1,0 +1,80 @@
+<body align="center" bgcolor="orange">
+    <br>
+     <div>
+       <div class="header"> <h1><u>Pandit Registration Form</u></h1> </div><br>
+       <div align="right" id="tag"><b>Already registered?</b> <a [routerLink]="[]" (click)="panditLogin()">Click here to Login as Pandit</a> | <a href="#">HomePage</a> </div>
+       <!-- <img src="1.jpg" alt="1" width="300" height="200"> -->
+       <marquee>Please fill the form below to Register as <b>Pandit </b> </marquee>
+       <br><br>
+   
+   <form #registerinform="ngForm" (ngSubmit)="registerPandit()">
+   <small class="danger">{{msg}}</small>
+   
+               <table style="width:50%" align="center">
+                   
+             
+                   <tr></tr>
+                   <tr>
+                         <th>First Name</th>
+                       <td><input type="text" name="First_name" [(ngModel)]="pandit.firstName" required /></td>
+                   </tr>
+           <tr></tr>
+   
+                   <tr>
+             <th>Last Name</th>
+             <td><input type="text" name="Last_name" [(ngModel)]="pandit.lastName" required /></td>
+                   </tr>
+           <tr></tr>
+   
+                   <tr>
+                       <th>Contact Number</th>
+                       <td><input type="number" name="Contact number" [(ngModel)]="pandit.contactNumber" required /></td>
+           </tr>
+           <tr></tr>
+   
+                   <tr>
+                       <th>City</th>
+                       <td><input type="text" name="City" [(ngModel)]="pandit.city" required /></td>
+                   </tr>
+           <tr></tr>
+   
+                   <tr>
+                       <th>Email Id</th>
+                       <td><input type="text" name="Email_Id" [(ngModel)]="pandit.emailId" required /></td>
+                   </tr>
+           <tr></tr>
+   
+           <tr>
+            <th>Dakshina</th>
+            <td><input type="dakshina" name="dakshina" [(ngModel)]="pandit.dakshina" required /></td>
+          </tr>
+  <tr></tr>
+                       <tr>
+                       <th>Password</th>
+                       <td><input type="password" name="password" [(ngModel)]="pandit.password" required /></td>
+                     </tr>
+             <tr></tr>
+   
+                   <tr>
+                       <th>Confirm Password</th>
+                       <td><input type="password" name="cpassword" /></td>
+                   </tr>
+           <tr></tr>
+   
+           <tr>
+             <td></td>
+             <td><button type="submit" value="Register" class="submit">Register</button></td>
+           </tr>
+                   </table>
+                   <br>
+               
+         </form>
+         <br><br>
+         <br>
+         
+   </div>
+   </body>
+   
+   
+    
+   

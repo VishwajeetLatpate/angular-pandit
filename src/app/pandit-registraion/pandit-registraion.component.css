@@ -1,0 +1,56 @@
+body{
+  background-image: url('/assets/images/123.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%; 
+}
+ 
+
+.submit {
+  background-color: chocolate;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 3px 2px;
+  cursor: pointer;
+  width: 70%;
+  }
+
+  .header {
+      padding: 10px;
+      text-align: center;
+      background: firebrick;
+      color: black;
+      font-size: 15px;
+    }
+
+    
+input{
+  border-top-color:yellow;
+  font-size:20px
+  }
+  
+  
+  a:link, a:visited {
+    background-color: firebrick;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: orange;
+  }
+  
+  input{
+  width:300px;
+  height:30px;
+  }
+  
+  th{
+  font-size:20px;
+  }

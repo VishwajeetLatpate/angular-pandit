@@ -10,8 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { BookingComponent } from './booking/booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
-
-
+import { PanditRegistraionComponent } from './pandit-registraion/pandit-registraion.component';
+import { PanditLoginComponent } from './pandit-login/pandit-login.component';
+import { PanditsuccessComponent } from './panditsuccess/panditsuccess.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { NavgrahavicharComponent } from './navgrahavichar/navgrahavichar.component';
+import { ContactuspageComponent } from './contactuspage/contactuspage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import{MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +27,26 @@ import { HomepageComponent } from './homepage/homepage.component';
     RegistrationComponent,
     LoginsuccessComponent,
     BookingComponent,
-    HomepageComponent
+    HomepageComponent,
+    PanditRegistraionComponent,
+    PanditLoginComponent,
+    PanditsuccessComponent,
+    AboutusComponent,
+    NavgrahavicharComponent,
+    ContactuspageComponent
+    
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    
+    MatNativeDateModule,
+    MatInputModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

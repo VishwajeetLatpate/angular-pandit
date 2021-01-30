@@ -1,0 +1,33 @@
+<body>
+    <br>
+     <h1 id="h1">Pandit Login </h1> 
+     <form align="center" #liginform="ngForm" (ngSubmit)="loginPandit()" >
+       <small class="danger">{{msg}}</small>
+     <marquee><b> Please Login to access the website </b></marquee>
+     <div id="tag" align="right"><a href="#">HomePage</a> | <a  (click)="gotoPanditRegistration()">New User? Click here For Registration</a></div> 
+     <table align="center">
+     <tr>
+       <th> EmailID: </th>
+       <td> <input type="text" name="email" id="nm"   [(ngModel)]="pandit.emailId" required /> </td>
+     </tr>
+     <br>
+     <tr></tr> <tr></tr> <tr></tr> <tr></tr>
+     <tr>
+       <th> Password: </th>
+       <td> <input type="password" name="psw" id="pass" [(ngModel)]="pandit.password" required /></td>
+     </tr>
+     
+     </table>
+     <br>
+     
+     <button type="submit" class="submit" value="Login">Login</button>
+     </form>
+     
+     <img src="/assets/images/ClientLogin.jpg" width="400" height="230" >  
+     
+    <br> <br> <br>
+</body>
+
+ 
+
+

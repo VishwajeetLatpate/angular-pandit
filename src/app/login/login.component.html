@@ -1,36 +1,33 @@
-<div class="container">
-  <div class="row">
-    
-    <div class="col-sm-2">
-    </div>
-    
-    <div class="col-sm-8">
-      <form class="mt-5" #liginform="ngForm" (ngSubmit)="loginUser()">
+<body>
+     <br>
+      <h1 id="h1">Client Login </h1> 
+      <form align="center" #liginform="ngForm" (ngSubmit)="loginUser()" >
         <small class="danger">{{msg}}</small>
-
-        <div class="form-group row">
-         <label for="uname" class="col-sm-2 col-form-label"><b>Email</b></label>
-         <input class= "col-sm-10" type="text" placeholder="Enter Email" name="uname" [(ngModel)]="client.emailId" required>
-        </div>
-
-        <div class="form-group row">
-         <label for="psw" class="col-sm-2 col-form-label"><b>Password</b></label>
-         <input class= "col-sm-10" type="password" placeholder="Enter Password" name="psw" [(ngModel)]="client.password" required>
-        </div>
-        
-         <button class="btn btn-primary" type="submit">Login</button>
-         <br/>
-         
-     <small class="btn btn-link" (click)="gotoregistration()">New User? Click here For Registration</small>
-
-    </form>   
-    </div>
-
-    <div class="col-sm-2">
+      <marquee><b> Please Login to access the website </b></marquee>
+      <div id="tag" align="right"><a href="#">HomePage</a> | <a  (click)="gotoregistration()">New User? Click here For Registration</a></div> 
+      <table align="center">
+      <tr>
+        <th> EmailID: </th>
+        <td> <input type="text" name="email" id="nm"   [(ngModel)]="client.emailId" required /> </td>
+      </tr>
+      <br>
+      <tr></tr> <tr></tr> <tr></tr> <tr></tr>
+      <tr>
+        <th> Password: </th>
+        <td> <input type="password" name="psw" id="pass" [(ngModel)]="client.password" required /></td>
+      </tr>
       
-    </div>
+      </table>
+      <br>
+      
+      <button type="submit" class="submit" value="Login">Login</button>
+      </form>
+      
+      <img src="/assets/images/ClientLogin.jpg" width="400" height="230" >  
+      
+     <br> <br> <br>
+</body>
 
-  </div>
-</div>
+  
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { BookingParams } from '../booking-params';
 import { RegistrationService } from '../registration.service';
@@ -54,6 +54,8 @@ export class LoginsuccessComponent implements OnInit {
 
 
 gotobooking(vidhiPanditId){
+    
+  
  
     console.log(vidhiPanditId);
 
@@ -79,5 +81,7 @@ gotobooking(vidhiPanditId){
  ) 
 
 }
+
+
 
 }

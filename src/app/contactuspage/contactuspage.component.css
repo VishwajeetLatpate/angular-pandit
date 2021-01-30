@@ -1,0 +1,45 @@
+
+
+  body {
+    background-image: url('/assets/images/123.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+      
+  }
+  #h1{
+    background-color:chocolate;
+    font-size:60px;
+     color:maroon;
+     text-align:center;
+    }
+
+   #h2 {
+      background-color:chocolate;
+      font-size:40px;
+       color:maroon;
+       text-align:center;
+      }
+
+      #nm {
+        background-color:chocolate;
+        font-size:40px;
+         color:maroon;
+         text-align:center;
+        }
+  
+
+
+
+    a:link, a:visited {
+      background-color: firebrick;
+      color: white;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: underline;
+      display: inline-block;
+    }
+    
+    a:hover, a:active {
+      background-color: orange;
+    }
