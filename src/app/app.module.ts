@@ -32,10 +32,7 @@ import{MatInputModule} from '@angular/material/input';
     PanditLoginComponent,
     PanditsuccessComponent,
     AboutusComponent,
-    NavgrahavicharComponent,
-    ContactuspageComponent
-    
-    
+    NavgrahavicharComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +40,6 @@ import{MatInputModule} from '@angular/material/input';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    
     MatNativeDateModule,
     MatInputModule,
     MatDatepickerModule

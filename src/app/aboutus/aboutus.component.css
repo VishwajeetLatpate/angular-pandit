@@ -10,12 +10,13 @@ a:link, a:visited {
   a:hover, a:active {
     background-color: orange;
   }
-  #h1{
+  .h1{
   background-color:chocolate;
   font-size:60px;
    color:maroon;
    text-align:center;
   }
+
   body {
     background-image: url('/assets/images/123.jpg');
     background-repeat: no-repeat;

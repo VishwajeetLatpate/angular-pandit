@@ -42,7 +42,7 @@ data :any;
       (data)=>{
             console.log("responce received");
             if(data){
-              this.msg="data saved";
+              this.msg="Data saved";
             }
             else{
               this.msg="error";

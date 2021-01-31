@@ -1,18 +1,25 @@
 <body>
 
-<form #loginpanditsuccess (ngSubmit)="addVidhiByDakshina()">
-    <div class="form-group">
-
-        <label for="vidhiSelection"  style="color:whitesmoke;">Vidhis list (select one):</label>
+<form  #loginpanditsuccess (ngSubmit)="addVidhiByDakshina()">
+    <div class="form-group pad">
+        <label for="vidhiSelection">Vidhis list (select one):</label>
         <select name="vidhiSelection" [(ngModel)]="vidhiName" class="form-control" id="vidhiSelection">
            <option *ngFor="let vidhiOption of vidhiOptions" [name]="vidhiOption.name" [ngValue]="vidhiOption.name">{{vidhiOption.name}}</option>
         </select>
-       <br>
+
+        <br>
+
         <label>Dakshina</label>
         <td> <input type="text" name="dakshina" [(ngModel)]="dakshina" id="dk" required /> </td>
-       <button class="btn btn-primary" type="submit" class="submit">Submit</button>
-   <p>{{msg}}</p>
-    </div>
+       
+        <br>
+
+        <button class="btn btn-primary" type="submit" class="submit">Submit</button>
+  
+        <p class="pad">{{msg}}</p>
+    
+</div>
 
 </form>
+
 </body>

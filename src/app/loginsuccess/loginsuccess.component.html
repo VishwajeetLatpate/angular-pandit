@@ -3,9 +3,7 @@
   <br>
 <h1 align="center"  style="color:whitesmoke;">Welcome </h1>
 
-
-
-<form  #loginsuccessform="ngForm" (ngSubmit)="getAll()">
+<form #loginsuccessform="ngForm" (ngSubmit)="getAll()">
  <div class="form-group">   
  <label for="vidhiSelection"  style="color:whitesmoke;">Vidhis list (select one):</label>
  <select name="vidhiSelection" [(ngModel)]="vidhiName" class="form-control" id="vidhiSelection">
