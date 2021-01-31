@@ -1,11 +1,11 @@
 <br>
 <body>
   <br>
-<h1 align="center"  style="color:whitesmoke;">Welcome </h1>
+<h1 align="center" >Welcome </h1>
 
-<form #loginsuccessform="ngForm" (ngSubmit)="getAll()">
+<form class="pad" #loginsuccessform="ngForm" (ngSubmit)="getAll()">
  <div class="form-group">   
- <label for="vidhiSelection"  style="color:whitesmoke;">Vidhis list (select one):</label>
+ <label for="vidhiSelection">Vidhis list (select one):</label>
  <select name="vidhiSelection" [(ngModel)]="vidhiName" class="form-control" id="vidhiSelection">
     <option *ngFor="let vidhiOption of vidhiOptions" [name]="vidhiOption.name" [ngValue]="vidhiOption.name">{{vidhiOption.name}}</option>
  </select>
@@ -15,7 +15,7 @@
 </form>
 <br>
 
-<table class="table table-striped" >
+<table class="table table-striped mar" >
   <thead>
     <tr>
      
@@ -49,12 +49,9 @@
 <p>{{msg}}</p>
 <br>
 
-<button type="button" class="btn btn-primary" (click)="getAllBooking()" class="submit">To View All Bookings</button>
+<button type="button" class="btn btn-primary mar" (click)="getAllBooking()" class="submit">To View All Bookings</button>
 
-<h3  style="color:whitesmoke;">Booking Table</h3>
-
-
-<table class="table table-striped">
+<table class="table table-striped mar">
     <thead>
       <tr>
         <th scope="col">BookingId</th>
