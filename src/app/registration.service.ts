@@ -5,6 +5,7 @@ import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { BookingParams } from './booking-params';
 import { Pandit } from './pandit';
+import { VidhiParams } from './vidhi-params';
 
 @Injectable({
   providedIn: 'root'
@@ -53,7 +54,11 @@ registerPanditFromRemote(pandit: Pandit) {
 }
 
 loginPanditRemote(pandit: Pandit) {
-  return this._http.post("http://localhost:8080/login",pandit);
+  return this._http.post("http://localhost:8080/login-pandit",pandit);
+}
+
+public postVidhiByPandit(vidhiParams:VidhiParams):Observable<any> {
+  return this._http.post("http://localhost:8080/vidhi-pandit",vidhiParams)
 }
 
 }

@@ -15,8 +15,12 @@ body {
       font-size: 20px;
       margin: 3px 2px;
       cursor: pointer;
-      width: 45%;
+      width: 50%;
       }
 
-
+p{
+    text-align: center;
+    color:aliceblue;
+    font-size: large;
+}
 

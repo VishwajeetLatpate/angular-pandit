@@ -23,8 +23,15 @@ export class PanditLoginComponent implements OnInit {
     this._service.loginPanditRemote(this.pandit).subscribe(
       (results)=> {
    
-        
-         this._router.navigate(['/panditsuccess'])
+        let navigationExtras: NavigationExtras = {
+          queryParams: {
+            "panditId" :  results['id']          
+          }
+      };
+
+        console.log("Results");
+        console.log(results);
+         this._router.navigate(['/panditsuccess'],navigationExtras)
       } ,
       
       () =>{  
@@ -34,6 +41,7 @@ export class PanditLoginComponent implements OnInit {
     )
   }
 
+  
   gotoPanditRegistration(){
     this._router.navigate(['/pandit-registration'])
 

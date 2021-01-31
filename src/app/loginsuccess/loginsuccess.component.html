@@ -3,9 +3,7 @@
   <br>
 <h1 align="center"  style="color:whitesmoke;">Welcome </h1>
 
-<input matInput [matDatepicker]="picker" placeholder="Pick a date">
-<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-<mat-datepicker #picker></mat-datepicker>
+
 
 <form  #loginsuccessform="ngForm" (ngSubmit)="getAll()">
  <div class="form-group">   
@@ -22,12 +20,12 @@
 <table class="table table-striped" >
   <thead>
     <tr>
-      <th scope="col">id</th>
+     
       <th scope="col">firstName</th>
       <th scope="col">lastName</th>
       <th scope="col">contactNumber</th>
       <th scope="col">city</th>
-      <th scope="col">emailId</th>
+      <th scope="col">Date</th>
       <th scope="col">dakshina</th>
       <th></th>
     </tr>
@@ -36,18 +34,21 @@
       
     <tbody *ngFor="let p of data">
       <tr>
-        <td> {{p.id}}</td>
+        
         <td> {{p.firstName}}</td>
         <td> {{p.lastName}}</td>
         <td> {{p.contactNumber}}</td>
         <td> {{p.city}}</td>
-        <td> {{p.emailId}}</td>
+        <td><input matInput [matDatepicker]="picker" placeholder="Pick a date" (dateInput)="inputEvent($event)">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker></td>
         <td> {{p.dakshina}}</td>
         <td><button type="button" class="btn btn-primary" class="submit" (click)="gotobooking(p.vidhiPanditId)">Select</button></td>
       </tr>
     </tbody>
 </table>
 <br>
+<p>{{msg}}</p>
 <br>
 
 <button type="button" class="btn btn-primary" (click)="getAllBooking()" class="submit">To View All Bookings</button>
@@ -61,9 +62,9 @@
         <th scope="col">BookingId</th>
         <th scope="col">Vidhi Name</th>
         <th scope="col">Pandit Name</th>
-        <th scope="col">Dakshina</th>
-        <th></th>
-      </tr>
+         <th scope="col">Dakshina</th>
+         <th scope="col">Date</th>      
+        </tr>
     </thead>
     
         
@@ -73,8 +74,9 @@
           <td> {{b.vidhiName}}</td>
           <td> {{b.panditName}}</td>
           <td> {{b.dakshina}}</td>
+          <td> {{b.date}}</td>
           </tr>
       </tbody>     
   </table>
-<br>
+<br>  
 </body>

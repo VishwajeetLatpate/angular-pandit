@@ -10,6 +10,7 @@ import { RegistrationService } from '../registration.service';
 })
 export class LoginsuccessComponent implements OnInit {
   bookingParams =new BookingParams;
+  msg='';
   public vidhiName: string = "";
   public data = [];
   public noData: any;
@@ -18,7 +19,8 @@ export class LoginsuccessComponent implements OnInit {
   public vidhiPanditId:number;
   public bookingData =[];
   public bookingResult =[];
- 
+  public date:string ="";
+  
   public vidhiOptions = [
     { id: 0, name: "Satyanarayan" },
     { id: 1, name: "Vastu Puja" },
@@ -29,7 +31,7 @@ export class LoginsuccessComponent implements OnInit {
     { id: 6, name: "Shradh" },
   ];
 
-  map: any;
+  somedata: any;
   
   constructor(private api: RegistrationService,private _router : Router,private route: ActivatedRoute) { 
     this.route.queryParams.subscribe(params => {
@@ -61,13 +63,17 @@ gotobooking(vidhiPanditId){
 
      this.bookingParams.clientId=this.clientId;
      this.bookingParams.vidhiPanditId=vidhiPanditId;
-
-    
- 
+     this.bookingParams.date=this.date;
   
     this.api.postBooking(this.bookingParams).subscribe(
-      ()=>{
+      (somedata)=>{
             console.log("responce received");
+            if(somedata){
+              this.msg="Selection Of Pandit Successful"
+            }
+            else{
+              this.msg="error";
+            }
       })
   
 
@@ -80,6 +86,10 @@ gotobooking(vidhiPanditId){
   } 
  ) 
 
+}
+inputEvent(event){
+  console.log(event.value);
+  this.date=event.value.toDateString();
 }
 
 
