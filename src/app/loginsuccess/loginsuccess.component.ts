@@ -56,14 +56,13 @@ export class LoginsuccessComponent implements OnInit {
 
 
 gotobooking(vidhiPanditId){
-    
-  
- 
     console.log(vidhiPanditId);
 
      this.bookingParams.clientId=this.clientId;
      this.bookingParams.vidhiPanditId=vidhiPanditId;
      this.bookingParams.date=this.date;
+
+     this.removeByAttr(this.data,'vidhiPanditId',vidhiPanditId)
   
     this.api.postBooking(this.bookingParams).subscribe(
       (somedata)=>{
@@ -76,8 +75,8 @@ gotobooking(vidhiPanditId){
             }
       })
   
-
     }
+
     getAllBooking(){
  this.api.getBookingFromRemote(this.clientId).subscribe(
   (bookingResult)=>{
@@ -87,11 +86,24 @@ gotobooking(vidhiPanditId){
  ) 
 
 }
+
+removeByAttr = function(arr, attr, value){
+  let i = arr.length;
+  while(i--){
+     if( arr[i] 
+         && arr[i].hasOwnProperty(attr) 
+         && (arguments.length > 2 && arr[i][attr] === value ) ){ 
+
+         arr.splice(i,1);
+
+     }
+  }
+  return arr;
+}
+
 inputEvent(event){
   console.log(event.value);
   this.date=event.value.toDateString();
 }
-
-
 
 }
